@@ -1,0 +1,217 @@
+/* ============================================
+   📝 JR Product Short Description Widget
+   ============================================ */
+.jr-short-desc-wrap {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ===== Title ===== */
+.jr-short-desc-title {
+    margin: 0 0 12px 0;
+    line-height: 1.3;
+    position: relative;
+    display: block;
+}
+
+.jr-short-desc-title.has-underline {
+    padding-bottom: 10px;
+}
+
+.jr-short-desc-title.has-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #FF8C00;
+    border-radius: 2px;
+}
+
+/* Center alignment underline */
+.jr-short-desc-wrap[style*="text-align: center"] .jr-short-desc-title.has-underline::after,
+.jr-short-desc-wrap[style*="text-align:center"] .jr-short-desc-title.has-underline::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.jr-short-desc-wrap[style*="text-align: right"] .jr-short-desc-title.has-underline::after,
+.jr-short-desc-wrap[style*="text-align:right"] .jr-short-desc-title.has-underline::after {
+    left: auto;
+    right: 0;
+}
+
+/* ===== Content ===== */
+.jr-short-desc-content {
+    color: #444;
+    font-size: 15px;
+    line-height: 1.7;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.jr-short-desc-content p {
+    margin: 0 0 12px 0;
+}
+
+.jr-short-desc-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Lists */
+.jr-short-desc-content ul,
+.jr-short-desc-content ol {
+    margin: 12px 0;
+    padding-left: 22px;
+}
+
+.jr-short-desc-content ul li,
+.jr-short-desc-content ol li {
+    margin-bottom: 6px;
+    line-height: 1.6;
+}
+
+.jr-short-desc-content ul li::marker,
+.jr-short-desc-content ol li::marker {
+    color: #FF8C00;
+}
+
+/* Links */
+.jr-short-desc-content a {
+    color: #FF8C00;
+    text-decoration: none;
+    transition: opacity .2s;
+}
+
+.jr-short-desc-content a:hover {
+    opacity: 0.75;
+    text-decoration: underline;
+}
+
+/* Headings inside content */
+.jr-short-desc-content h1,
+.jr-short-desc-content h2,
+.jr-short-desc-content h3,
+.jr-short-desc-content h4,
+.jr-short-desc-content h5,
+.jr-short-desc-content h6 {
+    margin: 16px 0 10px 0;
+    color: #1a1a1a;
+}
+
+/* Strong/Bold */
+.jr-short-desc-content strong,
+.jr-short-desc-content b {
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+/* Blockquote */
+.jr-short-desc-content blockquote {
+    margin: 14px 0;
+    padding: 12px 18px;
+    border-left: 4px solid #FF8C00;
+    background: #fff8e7;
+    color: #555;
+    font-style: italic;
+    border-radius: 4px;
+}
+
+/* Images inside */
+.jr-short-desc-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 10px 0;
+}
+
+/* Tables */
+.jr-short-desc-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+}
+
+.jr-short-desc-content table th,
+.jr-short-desc-content table td {
+    border: 1px solid #eee;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.jr-short-desc-content table th {
+    background: #fafafa;
+    font-weight: 600;
+}
+
+/* Code */
+.jr-short-desc-content code {
+    background: #f5f5f5;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.9em;
+    color: #c7254e;
+}
+
+/* ===== Read More Button ===== */
+.jr-read-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    padding: 6px 14px;
+    background: transparent;
+    color: #FF8C00;
+    border: 1px solid #FF8C00;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .25s ease;
+    line-height: 1.4;
+}
+
+.jr-read-more-btn:hover {
+    background: #FF8C00;
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(255,140,0,.25);
+}
+
+.jr-rm-icon {
+    width: 14px;
+    height: 14px;
+    transition: transform .3s ease;
+}
+
+.jr-read-more-btn.is-expanded .jr-rm-icon {
+    transform: rotate(180deg);
+}
+
+/* ===== Separator ===== */
+.jr-short-desc-separator {
+    width: 100%;
+    height: 1px;
+    background-color: #ececec;
+    margin: 15px 0;
+    border: none;
+}
+
+/* ===== Animations ===== */
+.jr-short-desc-content.is-collapsing,
+.jr-short-desc-content.is-expanding {
+    overflow: hidden;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    .jr-short-desc-content {
+        font-size: 14px;
+    }
+    
+    .jr-read-more-btn {
+        font-size: 12px;
+        padding: 5px 12px;
+    }
+}
