@@ -35,6 +35,7 @@ class Init {
 
             'Blog' => [
                 'Blog'     => \JR_Addons\Elementor\Widgets\Blog::class,
+                'Blog Grid' => \JR_Addons\Elementor\Widgets\BlogGrid::class,
                 'Blog Tabs' => \JR_Addons\Elementor\Widgets\BlogTabs::class,
             ],
 
@@ -62,9 +63,10 @@ class Init {
             ],
 
             'Advanced' => [
-                'Insurance'   => \JR_Addons\Elementor\Widgets\Insurance::class,
-                'Counting'    => \JR_Addons\Elementor\Widgets\Counting::class,
-                'Accordion'   => \JR_Addons\Elementor\Widgets\AdAccordion::class,
+                'Insurance'    => \JR_Addons\Elementor\Widgets\Insurance::class,
+                'Counting'     => \JR_Addons\Elementor\Widgets\Counting::class,
+                'Accordion'    => \JR_Addons\Elementor\Widgets\AdAccordion::class,
+                'Form Builder' => \JR_Addons\Elementor\Widgets\FormBuilder::class,
                 
             ],
         ];

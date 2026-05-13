@@ -1,0 +1,412 @@
+/* =============================================
+   JR Blog Grid Tabs
+   JR Addons - Elementor Widget
+   ============================================= */
+
+.jr-bgt-wrapper {
+    width: 100%;
+    box-sizing: border-box;
+}
+.jr-bgt-wrapper *,
+.jr-bgt-wrapper *::before,
+.jr-bgt-wrapper *::after {
+    box-sizing: border-box;
+}
+
+/* ── Tabs ────────────────────────────────── */
+.jr-bgt-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.jr-bgt-tab {
+    padding: 10px 24px;
+    border: 1px solid #ccc;
+    background: transparent;
+    color: #666;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    outline: none;
+    font-family: inherit;
+    line-height: 1.4;
+}
+
+.jr-bgt-tab:hover,
+.jr-bgt-tab.active {
+    background-color: #f5f0eb;
+    border-color: #8B7D6B;
+    color: #333;
+}
+
+.jr-bgt-tab:focus-visible {
+    box-shadow: 0 0 0 2px #8B7D6B;
+}
+
+/* ── Header ──────────────────────────────── */
+.jr-bgt-header {
+    margin-bottom: 30px;
+}
+
+.jr-bgt-section-title {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #8B7D6B;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+    line-height: 1.4;
+}
+
+.jr-bgt-section-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.jr-bgt-header[style*="text-align: center"] .jr-bgt-section-subtitle,
+.jr-bgt-header[style*="text-align:center"] .jr-bgt-section-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ── Grid ────────────────────────────────── */
+.jr-bgt-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* ── Card ────────────────────────────────── */
+.jr-bgt-card {
+    background-color: #f5f0eb;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.35s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.jr-bgt-card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* ── Card Image ──────────────────────────── */
+.jr-bgt-card-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.jr-bgt-card-image a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.jr-bgt-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.45s ease;
+}
+
+.jr-bgt-img-zoom:hover img {
+    transform: scale(1.06);
+}
+
+.jr-bgt-no-image {
+    width: 100%;
+    height: 100%;
+    background-color: #e8e0d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+/* ── Card Content ────────────────────────── */
+.jr-bgt-card-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 5px;
+}
+
+/* ── Badge ───────────────────────────────── */
+.jr-bgt-badge {
+    display: inline-block;
+    padding: 4px 14px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #8B7D6B;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    align-self: flex-start;
+    background: transparent;
+    line-height: 1.4;
+}
+
+/* ── Card Title ──────────────────────────── */
+.jr-bgt-card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 10px 0;
+    line-height: 1.35;
+}
+
+.jr-bgt-card-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.jr-bgt-card-title a:hover {
+    color: #8B7D6B;
+}
+
+/* ── Meta ────────────────────────────────── */
+.jr-bgt-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #999;
+}
+
+.jr-bgt-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.jr-bgt-meta svg {
+    flex-shrink: 0;
+}
+
+/* ── Excerpt ─────────────────────────────── */
+.jr-bgt-card-excerpt {
+    font-size: 14px;
+    color: #777;
+    margin: 0 0 20px 0;
+    line-height: 1.6;
+    flex: 1;
+}
+
+/* ── Read More ───────────────────────────── */
+.jr-bgt-read-more {
+    display: inline-block;
+    padding: 14px 30px;
+    background-color: #8B7D6B;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    text-align: center;
+    transition: all 0.3s ease;
+    margin-top: auto;
+    line-height: 1.4;
+}
+
+.jr-bgt-read-more.jr-bgt-btn-full {
+    display: block;
+    width: 100%;
+}
+
+.jr-bgt-read-more:hover {
+    background-color: #6b5f4f;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ── Load More ───────────────────────────── */
+.jr-bgt-loadmore-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.jr-bgt-loadmore {
+    padding: 14px 40px;
+    background-color: #e0d6cc;
+    color: #666;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    outline: none;
+    font-family: inherit;
+    line-height: 1.4;
+    position: relative;
+}
+
+.jr-bgt-loadmore:hover {
+    background-color: #8B7D6B;
+    color: #fff;
+}
+
+.jr-bgt-loadmore:focus-visible {
+    box-shadow: 0 0 0 2px #8B7D6B;
+}
+
+.jr-bgt-loadmore.jr-loading {
+    opacity: 0.7;
+    cursor: wait;
+    pointer-events: none;
+}
+
+.jr-bgt-loadmore.jr-no-more {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Loading spinner inside button */
+.jr-bgt-loadmore.jr-loading::after {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid transparent;
+    border-top-color: currentColor;
+    border-radius: 50%;
+    animation: jrBgtSpin 0.6s linear infinite;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+@keyframes jrBgtSpin {
+    to { transform: rotate(360deg); }
+}
+
+/* ── No Posts ────────────────────────────── */
+.jr-bgt-no-posts {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #999;
+    font-size: 16px;
+    padding: 60px 20px;
+    margin: 0;
+}
+
+/* ── Animations ──────────────────────────── */
+@keyframes jrBgtFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.jr-bgt-card.jr-bgt-animate {
+    animation: jrBgtFadeInUp 0.5s ease forwards;
+}
+
+.jr-bgt-card.jr-bgt-animate:nth-child(2) { animation-delay: 0.1s; }
+.jr-bgt-card.jr-bgt-animate:nth-child(3) { animation-delay: 0.2s; }
+.jr-bgt-card.jr-bgt-animate:nth-child(4) { animation-delay: 0.15s; }
+.jr-bgt-card.jr-bgt-animate:nth-child(5) { animation-delay: 0.25s; }
+.jr-bgt-card.jr-bgt-animate:nth-child(6) { animation-delay: 0.35s; }
+
+/* Grid loading overlay */
+.jr-bgt-grid.jr-bgt-loading {
+    position: relative;
+    min-height: 200px;
+}
+
+.jr-bgt-grid.jr-bgt-loading::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    z-index: 5;
+    backdrop-filter: blur(2px);
+}
+
+/* ── Responsive ──────────────────────────── */
+@media (max-width: 1024px) {
+    .jr-bgt-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .jr-bgt-tabs {
+        gap: 8px;
+    }
+
+    .jr-bgt-tab {
+        font-size: 11px;
+        padding: 8px 18px;
+    }
+}
+
+@media (max-width: 767px) {
+    .jr-bgt-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .jr-bgt-tabs {
+        gap: 6px;
+    }
+
+    .jr-bgt-tab {
+        font-size: 10px;
+        padding: 8px 14px;
+        letter-spacing: 1px;
+    }
+
+    .jr-bgt-section-title {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .jr-bgt-section-subtitle {
+        font-size: 14px;
+    }
+
+    .jr-bgt-card-title {
+        font-size: 16px;
+    }
+
+    .jr-bgt-card-excerpt {
+        font-size: 13px;
+    }
+
+    .jr-bgt-loadmore {
+        padding: 12px 30px;
+        font-size: 11px;
+        width: 100%;
+    }
+}

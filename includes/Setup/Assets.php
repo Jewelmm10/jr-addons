@@ -48,6 +48,21 @@ class Assets {
                 'version' => filemtime( JR_PATH . 'assets/js/jr-header-icons.js' ),
                 'deps'    => [ 'jquery' ],
             ],
+            'jr-product-description' => [
+                'src'     => JR_ASSETS . 'js/product-description.js',
+                'version' => filemtime( JR_PATH . 'assets/js/product-description.js' ),
+                'deps'    => [ 'jquery' ],
+            ],
+            'jr-blog-grid-script' => [
+                'src'     => JR_ASSETS . 'js/blog-grid.js',
+                'version' => filemtime( JR_PATH . 'assets/js/blog-grid.js' ),
+                'deps'    => [ 'jquery', 'elementor-frontend' ],
+            ],
+            'jr-form-builder' => [
+                'src'     => JR_ASSETS . 'js/jr-form-builder.js',
+                'version' => filemtime( JR_PATH . 'assets/js/jr-form-builder.js' ),
+                'deps'    => [ 'jquery' ],
+            ],
         ];
     }
 
@@ -74,9 +89,21 @@ class Assets {
                 'src'     => JR_ASSETS . 'css/product-short-description.css',
                 'version' => filemtime( JR_PATH . 'assets/css/product-short-description.css' ),
             ],
+            'jr-product-description' => [
+                'src'     => JR_ASSETS . 'css/product-description.css',
+                'version' => filemtime( JR_PATH . 'assets/css/product-description.css' ),
+            ],
             'jr-product-reviews' => [
                 'src'     => JR_ASSETS . 'css/product-reviews.css',
                 'version' => filemtime( JR_PATH . 'assets/css/product-reviews.css' ),
+            ],
+            'jr-blog-grid-style' => [
+                'src'     => JR_ASSETS . 'css/blog-grid.css',
+                'version' => filemtime( JR_PATH . 'assets/css/blog-grid.css' ),
+            ],
+            'jr-form-builder' => [
+                'src'     => JR_ASSETS . 'css/jr-form-builder.css',
+                'version' => filemtime( JR_PATH . 'assets/css/jr-form-builder.css' ),
             ],
             'jr-admin-style' => [
                 'src'     => JR_ASSETS . 'css/admin.css',
@@ -96,7 +123,9 @@ class Assets {
         wp_enqueue_style( 'product-actions-btn' );
         wp_enqueue_style( 'jr-product-reviews' );
         wp_enqueue_style( 'jr-product-short-description' );
-
+        wp_enqueue_style( 'jr-product-description' );
+        wp_enqueue_style( 'jr-blog-grid-style' );
+        wp_enqueue_style( 'jr-form-builder' );
         // ============================================
         // Scripts
         // ============================================
@@ -106,6 +135,9 @@ class Assets {
         wp_enqueue_script( 'jr-product-actions-script' );
         wp_enqueue_script( 'jr-product-reviews-script' );
         wp_enqueue_script( 'jr-product-short-description' );
+        wp_enqueue_script( 'jr-product-description' );
+        wp_enqueue_script( 'jr-blog-grid-script' );
+        wp_enqueue_script( 'jr-form-builder' );
 
         // ============================================
         // Search Localize
@@ -125,6 +157,8 @@ class Assets {
             'nonces'       => [
                 'review' => wp_create_nonce( 'jr_review_nonce' ),
                 'reply'  => wp_create_nonce( 'jr_submit_reply' ),
+                'blog_grid' => wp_create_nonce( 'jr_blog_grid_nonce' ),
+                'form'      => wp_create_nonce( 'jr_form_nonce' ),
             ],
         ]);
     }

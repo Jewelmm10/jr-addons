@@ -102,8 +102,16 @@ final class JR_Addons {
         \JR_Addons\Ajax\CartAjax::init();
         \JR_Addons\Tools\MiniCart::init();
         \JR_Addons\Ajax\ReviewAjax::init();
-        
-
+         // ── DEBUG ──
+        if (class_exists('\JR_Addons\Ajax\BlogGridAjax')) {
+            error_log('BlogGridAjax class EXISTS');
+            \JR_Addons\Ajax\BlogGridAjax::init();
+            error_log('BlogGridAjax::init() called');
+        } else {
+            error_log('BlogGridAjax class NOT FOUND - check file path');
+        }
+        \JR_Addons\Ajax\FormSubmitAjax::init();
+            
     }
 
     public function activate() {
