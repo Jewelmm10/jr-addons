@@ -1,0 +1,132 @@
+.jr-shipping-options-wrapper {
+    width: 100%;
+}
+
+/* SKU */
+.jr-sku-wrap {
+    margin-bottom: 12px;
+}
+.jr-sku {
+    font-size: 14px;
+    color: #1a1a1a;
+}
+.jr-sku strong {
+    margin-right: 5px;
+}
+
+/* Reviews */
+.jr-reviews-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+.jr-stars {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+.jr-stars-empty {
+    color: #ddd;
+}
+.jr-stars-filled {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    color: #FF8C00;
+    white-space: nowrap;
+}
+.jr-review-link {
+    font-size: 14px;
+    color: #666;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.jr-review-link:hover {
+    color: #FF8C00;
+}
+
+/* Shipping Box */
+.jr-shipping-box {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 20px;
+}
+.jr-shipping-method {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid #eee;
+}
+.jr-shipping-method:first-child {
+    padding-top: 0;
+}
+.jr-shipping-method:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+.jr-method-icon {
+    flex-shrink: 0;
+    width: 28px;
+    font-size: 28px;
+    color: #FF8C00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.jr-method-icon img {
+    width: 28px;
+    height: auto;
+    object-fit: contain;
+}
+.jr-method-content {
+    flex: 1;
+    min-width: 0;
+}
+.jr-method-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+.jr-method-desc {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.4;
+}
+.jr-method-meta {
+    flex-shrink: 0;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+.jr-method-time {
+    font-size: 13px;
+    color: #777;
+}
+.jr-method-price {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .jr-shipping-method {
+        flex-wrap: wrap;
+    }
+    .jr-method-meta {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding-left: 42px;
+    }
+}

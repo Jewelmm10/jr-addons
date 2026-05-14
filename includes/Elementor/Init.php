@@ -59,6 +59,8 @@ class Init {
                 'Product Description'   => \JR_Addons\Elementor\Widgets\SingleProduct\Product_Description::class,
                 'Product Reviews'       => \JR_Addons\Elementor\Widgets\SingleProduct\Product_Reviews::class,
                 'Related Products'      => \JR_Addons\Elementor\Widgets\SingleProduct\Product_Related::class,
+                'Product Accessories'      => \JR_Addons\Elementor\Widgets\SingleProduct\ProductAccessories::class,
+                'Extra Product Info'      => \JR_Addons\Elementor\Widgets\SingleProduct\ExtraOptions::class,
 
             ],
 

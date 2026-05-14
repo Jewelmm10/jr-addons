@@ -1,0 +1,121 @@
+.jr-acc-wrapper {
+    background: #f5f5f5;
+    border-radius: 12px;
+    padding: 20px;
+}
+.jr-acc-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 16px;
+}
+.jr-acc-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.jr-acc-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 12px 14px;
+    transition: all 0.25s ease;
+}
+.jr-acc-item:hover {
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+.jr-acc-thumb-link {
+    flex-shrink: 0;
+    display: block;
+}
+.jr-acc-thumb {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    object-fit: cover;
+    display: block;
+}
+.jr-acc-info {
+    flex: 1;
+    min-width: 0;
+}
+.jr-acc-name {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-decoration: none;
+    margin-bottom: 4px;
+    line-height: 1.3;
+    transition: color 0.2s;
+}
+.jr-acc-name:hover {
+    color: #FF8C00;
+}
+.jr-acc-price {
+    font-size: 14px;
+    font-weight: 600;
+    color: #FF8C00;
+}
+.jr-acc-price .amount {
+    color: inherit;
+}
+.jr-acc-price del {
+    color: #999;
+    font-weight: 400;
+    margin-right: 6px;
+    opacity: 0.7;
+}
+.jr-acc-btn {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #FF8C00;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    min-width: 100px;
+}
+.jr-acc-btn:hover {
+    background: #1a1a1a;
+    color: #fff;
+}
+.jr-acc-btn.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+.jr-acc-btn.added {
+    background: #15803d !important;
+    color: #fff !important;
+}
+.jr-acc-btn .jr-spinner {
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: jr-spin 0.7s linear infinite;
+}
+@keyframes jr-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .jr-acc-item {
+        flex-wrap: wrap;
+    }
+    .jr-acc-btn {
+        width: 100%;
+        margin-top: 8px;
+    }
+}
